@@ -2,6 +2,7 @@ from motor.motor_asyncio import AsyncIOMotorClient
 from config import MONGO_DB_URI
 import logging
 
+<<<<<<< HEAD
 # إعداد logging
 logging.basicConfig(
     level=logging.INFO,
@@ -12,6 +13,9 @@ logging.basicConfig(
         logging.StreamHandler(),
     ],
 )
+=======
+import logging
+>>>>>>> حفظ التعديلات قبل السحب
 
 # استخدام logging بدلاً من LOGGER
 logging.getLogger("ميوزك اليــكس").info("جـارِ الاتصـال بقاعـدة البيانـات . . .")
