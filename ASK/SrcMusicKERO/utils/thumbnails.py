@@ -141,12 +141,21 @@ async def get_thumb(videoid):
             (255, 255, 255),
             font=arial,
         )
+
+        # طباعة نوع المتغيرات للمساعدة في تصحيح الأخطاء
+        print(f"📌 نوع المتغير views: {type(views)}")
+        print(f"📌 نوع المتغير duration: {type(duration)}")
+        print(f"📌 نوع المتغير channel: {type(channel)}")
+
         try:
             os.remove(f"cache/thumb{videoid}.png")
-        except:
+        except Exception as e:
+            print(f"📌 خطأ عند حذف الصورة المؤقتة: {type(e)} - {e}")
             pass
+
         background.save(f"cache/{videoid}.png")
         return f"cache/{videoid}.png"
     except Exception as e:
-        await app.send_message("AlEx",e)
+        print(f"📌 خطأ أثناء تنفيذ get_thumb: {type(e)} - {e}")
+        await app.send_message("AlEx", str(e))
         return YOUTUBE_IMG_URL
