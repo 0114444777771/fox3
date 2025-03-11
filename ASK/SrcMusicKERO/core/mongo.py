@@ -3,6 +3,7 @@ from config import MONGO_DB_URI
 import logging
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 # إعداد logging
 logging.basicConfig(
     level=logging.INFO,
@@ -16,6 +17,9 @@ logging.basicConfig(
 =======
 import logging
 >>>>>>> حفظ التعديلات قبل السحب
+=======
+import logging
+>>>>>>> f7abd4148cbf1aa619a64cba9dd54b45c0c3f6be
 
 # استخدام logging بدلاً من LOGGER
 logging.getLogger("ميوزك اليــكس").info("جـارِ الاتصـال بقاعـدة البيانـات . . .")
