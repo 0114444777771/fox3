@@ -3,7 +3,7 @@ from SrcMusicKERO.core.dir import dirr
 from SrcMusicKERO.core.userbot import Userbot
 from SrcMusicKERO.misc import dbb, heroku
 
-from .logging import LOGGER
+import logging
 
 dirr()
 dbb()
