@@ -7,7 +7,7 @@ from git.exc import GitCommandError, InvalidGitRepositoryError
 
 import config
 
-from ..logging import LOGGER
+import logging
 
 def install_req(cmd: str) -> Tuple[str, str, int, int]:
     async def install_requirements():

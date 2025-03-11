@@ -2,7 +2,7 @@ from motor.motor_asyncio import AsyncIOMotorClient
 
 from config import MONGO_DB_URI
 
-from ..logging import LOGGER
+import logging
 
 LOGGER("ميوزك اليــكس").info("جـارِ الاتصـال بقاعـدة البيانـات . . .")
 try:
