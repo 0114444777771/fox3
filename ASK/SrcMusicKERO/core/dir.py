@@ -1,7 +1,6 @@
 import os
 
-from ..logging import LOGGER
-
+import logging
 
 def dirr():
     for file in os.listdir():
