@@ -14,6 +14,5 @@ logging.getLogger("httpx").setLevel(logging.ERROR)
 logging.getLogger("pyrogram").setLevel(logging.ERROR)
 logging.getLogger("pytgcalls").setLevel(logging.ERROR)
 
-
-def LOGGER(name: str) -> logging.Logger:
-    return logging.getLogger(name)
+# هذا السطر ليس ضروريًا، يمكنك استخدام logging.getLogger مباشرة
+LOGGER = logging.getLogger(__name__)
