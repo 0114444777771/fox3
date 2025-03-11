@@ -7,7 +7,7 @@ from pyrogram import filters
 import config
 from SrcMusicKERO.core.mongo import mongodb
 
-from .logging import LOGGER
+import logging
 
 SUDOERS = filters.user()
 
