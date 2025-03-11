@@ -1,23 +1,22 @@
 import socket
 import time
-
 import heroku3
 from pyrogram import filters
-
 import config
 from SrcMusicKERO.core.mongo import mongodb
-
 import logging
+
+# إعداد الـ logger
+logging.basicConfig(level=logging.INFO)
+LOGGER = logging.getLogger("ميوزك اليــكس")
 
 SUDOERS = filters.user()
 
 HAPP = None
 _boot_ = time.time()
 
-
 def is_heroku():
     return "heroku" in socket.getfqdn()
-
 
 XCB = [
     "/",
@@ -35,12 +34,10 @@ XCB = [
     "master",
 ]
 
-
 def dbb():
     global db
     db = {}
-    LOGGER("ميوزك اليــكس").info(f"تم تحديث قاعدة بيانات البوت ...✓")
-
+    LOGGER.info("تم تحديث قاعدة بيانات البوت ...✓")
 
 async def sudo():
     global SUDOERS
@@ -58,8 +55,7 @@ async def sudo():
     if sudoers:
         for user_id in sudoers:
             SUDOERS.add(user_id)
-    LOGGER("ميوزك اليــكس").info(f" تم تحميل قائمة مطورين البوت ...✓")
-
+    LOGGER.info("تم تحميل قائمة مطورين البوت ...✓")
 
 def heroku():
     global HAPP
@@ -77,8 +73,8 @@ def heroku():
                 heroku_var["API_ID"] = zzapid
                 heroku_var["API_HASH"] = zzapihash
                 heroku_var["MONGO_DB_URI"] = zzzdb
-                LOGGER("ميوزك الــيكس").info(f"تم إضافة فارات البوت ...✓")
+                LOGGER.info("تم إضافة فارات البوت ...✓")
             except BaseException:
-                LOGGER(__name__).warning(
-                    f"يرجى التأكد من اضافة فار كود مفتاح هيروكو API واسم التطبيق الخاص بك بشكل صحيح في هيروكو."
+                LOGGER.warning(
+                    "يرجى التأكد من اضافة فار كود مفتاح هيروكو API واسم التطبيق الخاص بك بشكل صحيح في هيروكو."
                 )
