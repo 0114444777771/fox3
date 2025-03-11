@@ -3,8 +3,7 @@ from pyrogram.enums import ChatMemberStatus, ParseMode
 
 import config
 
-from logging import LOGGER
-
+import logging
 
 class Zelzaly(Client):
     def __init__(self):
